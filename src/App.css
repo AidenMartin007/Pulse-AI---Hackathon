@@ -1,38 +1,127 @@
+/* =================================================================
+   FINAL STYLING - src/App.css
+   This CSS creates the professional two-column dashboard layout.
+   ================================================================= */
+
+/* Basic reset for the entire page */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f7f9fc;
+  color: #212529;
+}
+
+/* This is the magic for the two-column layout */
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden; /* Prevent the whole page from scrolling */
+}
+
+/* --- Left Panel Styling --- */
+.form-container {
+  width: 40%;
+  max-width: 500px; /* Set a max width for larger screens */
+  min-width: 350px; /* Ensure it doesn't get too squished */
+  padding: 24px 32px;
+  overflow-y: auto; /* Allow ONLY this panel to scroll */
+  background-color: #ffffff;
+  border-right: 1px solid #e0e0e0;
+  box-sizing: border-box; /* Important for correct width calculation */
+}
+
+.form-container h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-top: 0;
+  margin-bottom: 8px;
+  color: #1a1a1a;
+}
+
+.form-container p {
+  font-size: 1rem;
+  color: #6c757d;
+  margin-top: 0;
+  margin-bottom: 24px;
+}
+
+.form-container form input[type="text"] {
+  width: 100%;
+  padding: 12px 16px;
+  margin-bottom: 12px;
+  border-radius: 8px;
+  border: 1px solid #ced4da;
+  font-size: 1rem;
+  box-sizing: border-box;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-container form input[type="text"]:focus {
+  border-color: #4285F4;
+  box-shadow: 0 0 0 3px rgba(66, 133, 244, 0.2);
+  outline: none;
+}
+
+.form-container form button {
+  width: 100%;
+  padding: 12px 20px;
+  border: none;
+  background-color: #4285F4;
   color: white;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
 }
 
-.App-link {
-  color: #61dafb;
+.form-container form button:hover {
+  background-color: #357ae8;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.incident-list h2 {
+  margin-top: 40px;
+  border-bottom: 1px solid #e0e0e0;
+  padding-bottom: 16px;
+}
+
+.incident-card {
+  background-color: #ffffff;
+  border: 1px solid #e9ecef;
+  border-left: 5px solid #4285F4; /* Blue accent line */
+  padding: 16px;
+  margin-bottom: 16px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.incident-card h3 {
+  margin-top: 0;
+  margin-bottom: 8px;
+  color: #343a40;
+}
+
+.incident-card p {
+  margin: 4px 0;
+  font-size: 0.95rem;
+  color: #495057;
+}
+
+.original-report {
+  font-style: italic;
+  color: #6c757d !important; /* Override other p styles */
+  font-size: 0.9rem !important;
+  margin-top: 8px !important;
+}
+
+/* --- Right Panel Styling --- */
+.map-container {
+  width: 60%;
+  height: 100%;
 }

@@ -1,0 +1,9 @@
+{
+  "projects": {
+    "default": "pulseai-blr",
+    "pulseai-blr": "pulseai-blr",
+    "pluseai-blr": "pulseai-blr"
+  },
+  "targets": {},
+  "etags": {}
+}
