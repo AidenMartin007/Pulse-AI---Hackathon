@@ -1,3 +1,9 @@
+Firebase Published URL : https://pulseai-blr.web.app/
+
+1. Please Sign Up with your userid.
+2. Choose Admin/User respectively.
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
